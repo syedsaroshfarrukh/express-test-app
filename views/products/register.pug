@@ -1,0 +1,19 @@
+extends ../layout
+
+block content
+
+    div.row
+        .col-sm-6.p-3
+            h1 Add New Product
+            form(action="/register",method="post")
+                .form-group
+                    label Name
+                    input(type="text",id="name",placeholder="Enter Name",name="name",class='form-control')
+                .form-group
+                    label Email 
+                    input(type="email",id="email",placeholder="Enter Email",name="email",class='form-control')
+                .form-group
+                    label Password
+                    input(type="password",id="password",placeholder="Enter Password",name="password",class='form-control')
+                button(type="submit",class='btn btn-primary') Submit
+

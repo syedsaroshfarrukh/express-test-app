@@ -1,0 +1,16 @@
+extends ../layout
+
+block content
+
+    div.row
+        .col-sm-6.p-3
+            h1 Add New Product
+            form(action="/products/add",method="post")
+                .form-group
+                    label Product Name
+                    input(type=text,id="name",placeholder="Enter Name",name="name",class='form-control')
+                .form-group
+                    label Product Price
+                    input(type=number,id="price",placeholder="Enter Price",name="price",class='form-control')
+                button(type="submit",class='btn btn-primary') Submit
+

@@ -1,0 +1,16 @@
+extends ../layout
+
+block content
+
+    div.row
+        .col-sm-6.p-3
+            h1 Login
+            form(action="/login",method="post")
+                .form-group
+                    label Email 
+                    input(type="email",id="email",placeholder="Enter Email",name="email",class='form-control')
+                .form-group
+                    label Password
+                    input(type="password",id="password",placeholder="Enter Password",name="password",class='form-control')
+                button(type="submit",class='btn btn-primary') Submit
+
