@@ -1,0 +1,27 @@
+extends ../layout
+
+block content
+
+    h1(class="mt-4 mb-2") Edit post
+    
+    <form action="/courses/edit/#{course._id}" method="post">
+        <div class="form-group">
+            <label for="exampleInputPassword1">Course Name</label>
+            <input type="text" class="form-control" name="crName" value="#{course.crName}" id="exampleInputPassword1">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Course ID</label>
+            <input type="number" class="form-control" name="crId" value="#{course.crId}" id="exampleInputPassword1">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Course Duration (Hrs)</label>
+            <input type="number" class="form-control" name="crDuration" value="#{course.crDuration}" id="exampleInputPassword1">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Course Fee</label>
+            <input type="number" class="form-control" name="crFee" value="#{course.crFee}" id="exampleInputPassword1">
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+    

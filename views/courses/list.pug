@@ -1,0 +1,25 @@
+extends ../layout
+
+block content
+    .row
+        .col-md-8
+            h1 list of courses
+        .col-md-4
+            a(href="courses/add" class="btn btn-success float-right") Add New course
+    
+    table.table
+        thead
+            th Course Name
+            th Course Id
+            th Course Duration(Hrs)
+            th Course Fee(USD)
+        tbody
+            each course in courses
+                tr
+                    td=course.crName
+                    td=course.crId
+                    td=course.crDuration
+                    td=course.crFee
+                    td  
+                        a(href="/courses/delete/"+course._id, class="btn btn-primary mr-2") Delete
+                        a(href="/courses/edit/"+course._id, class="btn btn-primary") Edit

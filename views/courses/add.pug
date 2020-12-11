@@ -1,0 +1,27 @@
+extends ../layout
+
+block content
+
+    h1 Add new post
+       
+    <form action="/courses/add" method="post">
+        <div class="form-group">
+            <label for="exampleInputPassword1">Course Name</label>
+            <input type="text" class="form-control" name="crName" id="exampleInputPassword1">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Course ID</label>
+            <input type="number" class="form-control" name="crId" id="exampleInputPassword1">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Course Duration (Hrs)</label>
+            <input type="number" class="form-control" name="crDuration" id="exampleInputPassword1">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Course Fee</label>
+            <input type="number" class="form-control" name="crFee" id="exampleInputPassword1">
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    
